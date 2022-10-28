@@ -5,3 +5,7 @@
 ## Usage
 
 - `npm run dev` to run locally.
+
+## GIT
+
+- `git push -u origin main`

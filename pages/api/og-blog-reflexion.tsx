@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-server-import-in-page */
 import { ImageResponse } from '@vercel/og';
 import { NextRequest } from 'next/server';
 
