@@ -7,14 +7,6 @@ export const config = {
 
 export default function handler(req: NextRequest) {
   try {
-    const { searchParams } = new URL(req.url);
-
-    // ?title=<title>
-    const hasTitle = searchParams.has('title');
-    const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
-      : 'My default title';
-
     return new ImageResponse(
       (
         <div
@@ -34,31 +26,21 @@ export default function handler(req: NextRequest) {
           <div
             style={{
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
               justifyItems: 'center',
-              fontSize: 40,
               border: '1px solid black',
               padding: '.6em',
               borderRadius: 5,
             }}
           >
             {/* THIS IS THE TEXT: */}
-            R&#x18E;M
-          </div>
-          <div
-            style={{
-              fontSize: 60,
-              fontStyle: 'normal',
-              letterSpacing: '-0.025em',
-              color: 'black',
-              marginTop: 30,
-              padding: '0 120px',
-              lineHeight: 1.4,
-              whiteSpace: 'pre-wrap',
-            }}
-          >
-            {title}
+            <span
+            style={{fontSize: 60}}>fernando ferrer</span>
+            <span
+            style={{fontSize: 40}}
+            >Dramaturgo, Director, Docente, Actor</span>
           </div>
         </div>
       ),
